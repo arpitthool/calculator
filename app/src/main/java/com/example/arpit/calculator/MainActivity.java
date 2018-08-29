@@ -210,15 +210,15 @@ public class MainActivity extends AppCompatActivity {
                         continue;
 
                     // Current token is a number, push it to stack for numbers
-                    if (tokens[i] >= '0' && tokens[i] <= '9')
-                    {   /*
-                        String sbuf = new String("");
+                    if (tokens[i] >= '0' && tokens[i] <= '9' )
+                    {
+                        StringBuilder sbuf = new StringBuilder();
                         // There may be more than one digits in number
                         while (i < tokens.length && tokens[i] >= '0' && tokens[i] <= '9')
                             sbuf.append(tokens[i++]);
+                        i--;
                         values.push(Integer.parseInt(sbuf.toString()));
-                        */
-                        values.push(Integer.parseInt(tokens[i] + ""));
+                       // values.push(Integer.parseInt(tokens[i] + ""));
                     }
 
                     else if (tokens[i] == '(')
